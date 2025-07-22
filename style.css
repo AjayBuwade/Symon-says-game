@@ -1,0 +1,106 @@
+/* Animated Gradient Background */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+  background-size: 600% 600%;
+  animation: gradientAnimation 15s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  transition: color 0.4s ease;
+}
+
+/* Background animation keyframes */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism Card */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  color: #ffffff;
+  transition: background 0.4s ease, color 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Headings */
+h1, h4, p {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  margin: 10px 0;
+}
+
+/* Light Theme */
+body.light-theme {
+  background: linear-gradient(270deg, #d9a7c7, #fffcdc);
+  background-size: 600% 600%;
+  color: #212121;
+}
+
+body.light-theme .card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  color: #212121;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+/* Game Buttons with Subtle Glow */
+.color-btn {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.color-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Subtle button colors */
+.green { background-color: #4CAF50; box-shadow: 0 0 5px #4CAF50; }
+.red { background-color: #f44336; box-shadow: 0 0 5px #f44336; }
+.yellow { background-color: #FFEB3B; box-shadow: 0 0 5px #FFEB3B; color: #333; }
+.blue { background-color: #2196F3; box-shadow: 0 0 5px #2196F3; }
+
+/* On button press */
+.pressed {
+  opacity: 0.85;
+  box-shadow: 0 0 10px white;
+}
+
+
+/* Buttons */
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* Game Over Shake */
+.game-over {
+  animation: shake 0.3s ease-in-out 2;
+}
+
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-5px); }
+  50% { transform: translate(5px); }
+  75% { transform: translate(-5px); }
+  100% { transform: translate(0); }
+}
